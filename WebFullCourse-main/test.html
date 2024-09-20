@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject-Lesson-Page Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Select Subject</h2>
+        
+        <label for="subject">Subject:</label>
+        <select id="subject" onchange="populateLessonAndPage()">
+            <option value="">--Select Subject--</option>
+        </select>
+
+        <label for="lesson">Lesson:</label>
+        <select id="lesson" onchange="updatePage()">
+            <option value="">--Select Lesson--</option>
+        </select>
+
+        <label for="page">Page:</label>
+        <input type="text" id="page" readonly>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    // Provided data array with subjects and lessons
+const subjectsData = [
+    {
+        subjectId: 1,
+        subject: "Math",
+        lessons: [
+            { lessonId: 101, lesson: "Algebra", page: "10" },
+            { lessonId: 102, lesson: "Geometry", page: "15" },
+            { lessonId: 103, lesson: "Test", page: "150" }
+        ]
+    },
+    {
+        subjectId: 2,
+        subject: "Science",
+        lessons: [
+            { lessonId: 201, lesson: "Physics", page: "30" },
+            { lessonId: 202, lesson: "Chemistry", page: "35" }
+        ]
+    },
+    {
+        subjectId: 3,
+        subject: "History",
+        lessons: [
+            { lessonId: 301, lesson: "Ancient Civilizations", page: "50" },
+            { lessonId: 302, lesson: "World Wars", page: "55" }
+        ]
+    }
+];
+
+// Initialize the subject dropdown on page load
+window.onload = function () {
+    let subjectDropdown = document.getElementById("subject");
+
+    // Populate the subject dropdown
+    subjectsData.forEach(subject => {
+        let option = document.createElement("option");
+        option.value = subject.subjectId;
+        option.textContent = subject.subject;
+        subjectDropdown.appendChild(option);
+    });
+};
+
+// Function to populate lessons and clear page
+function populateLessonAndPage() {
+    let subjectId = document.getElementById("subject").value;
+    let lessonDropdown = document.getElementById("lesson");
+    let pageInput = document.getElementById("page");
+
+    // Clear previous lessons and page input
+    lessonDropdown.innerHTML = '<option value="">--Select Lesson--</option>';
+    pageInput.value = "";
+
+    if (subjectId) {
+        // Find the selected subject's lessons
+        let selectedSubject = subjectsData.find(sub => sub.subjectId == subjectId);
+
+        // Populate lessons dropdown
+        selectedSubject.lessons.forEach(lesson => {
+            let option = document.createElement("option");
+            option.value = lesson.lessonId;
+            option.textContent = lesson.lesson;
+            lessonDropdown.appendChild(option);
+        });
+    }
+}
+
+// Function to update the page based on selected lesson
+function updatePage() {
+    let subjectId = document.getElementById("subject").value;
+    let lessonId = document.getElementById("lesson").value;
+    let pageInput = document.getElementById("page");
+
+    if (subjectId && lessonId) {
+        // Find the selected subject
+        let selectedSubject = subjectsData.find(sub => sub.subjectId == subjectId);
+
+        // Find the selected lesson
+        let selectedLesson = selectedSubject.lessons.find(lesson => lesson.lessonId == lessonId);
+
+        // Update the page input
+        pageInput.value = selectedLesson.page;
+    } else {
+        pageInput.value = "";
+    }
+}
+
+</script>
+</html>

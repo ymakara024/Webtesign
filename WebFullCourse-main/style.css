@@ -1,0 +1,525 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header-container-full{
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.header-container{
+    width: 75%;
+    height: 130px;
+    /* background-color: green; */
+    margin: auto;
+}
+.header-container img{
+    height: 80%;
+    margin-top: 15px;
+}
+
+.menu-container-full{
+    width: 100%;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.menu-container{
+    width: 75%;
+    overflow: hidden;
+    /* background-color: yellowgreen; */
+    margin: auto;
+}
+.menu-container ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-container ul li{
+    float: left;
+}
+
+.menu-container ul li a{
+    display: block;
+    padding: 13px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Koulen';
+    opacity: 0.7;
+}
+.menu-container ul li a:hover{
+    opacity: 1;
+    background-color: brown;
+}
+
+.homepage{
+    width: 75%;
+    height: 550px;
+    /* background-color: black; */
+    margin: 20px auto;
+}
+.homepage-new{
+    width: 69%;
+    height: 100%;
+    margin-right: 1%;
+    float: left;
+    background-color: burlywood;
+}
+
+.homepage-ads{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: rgb(45, 28, 7);
+}
+.homepage-ads .ads1{
+    width: 100%;
+    height: 50%;
+}
+.homepage-ads .ads2{
+    width: 100%;
+    height: 50%;
+}
+.homepage-ads .ads1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.homepage-ads .ads2 iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.homepage-new .content{
+    width: 60%;
+    height: 50%;
+    float: left;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    /* background-color: blue; */
+    background-image: url('img/1.jpg');
+}
+.homepage-new .content:nth-child(2){
+    width: 40%;
+    background-color: green;
+    background-image: url('img/2.jpg');
+}
+.homepage-new .content:nth-child(3){
+    background-image: url('img/3.jpg');
+}
+.homepage-new .content:last-child{
+    width: 40%;
+    background-image: url('img/4.jpg');
+}
+.content .title{
+    width: 120px;
+    height: 40px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px ;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+}
+.content .title p{
+    font-size: 15px;
+    font-family: 'Battambang';
+    color: white;
+    transform: translateX(-10px);
+    
+}
+.content h3{
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: 'Battambang';
+    line-height: 30px;
+    margin-right: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transform: translateY(110px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.content:hover h3{
+    transform: translateY(70px);
+}
+.content h3 span{
+    font-size: 14px;
+    opacity: 0;
+}
+
+.content:hover h3 span{
+    opacity: 1;
+    text-shadow: 1px 1px 2px black;
+}
+.content:nth-child(2):hover h3{
+    transform: translateY(30px);
+}
+.content:nth-child(4):hover h3{
+    transform: translateY(30px);
+}
+
+.VDO-container{
+    margin-top: 40px;
+    width: 75%;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 1px 1px 1px grey;
+}
+.sub-title-box{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    border-bottom: 3px solid red;
+}
+.sub-title-box .Description{
+    width: 10%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+}
+.sub-title-box .Description p{
+    color: white;
+    font-size: 22px;
+    font-family: 'Koulen';
+    transform: translateX(-10px);
+}
+.content-new{
+    width: 100%;
+    height: 600px;
+    /* background-color: black; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+.content-new .banner-news{
+    width: 100%;
+    height: 40%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content-new .daily-news{
+    width: 100%;
+    height: 60%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.banner-news .box-item{
+    width: 33%;
+    height: 100%;
+    /* background-color: black; */
+}
+.box-item .picture{
+    width: 100%;
+    height: 70%;
+    background-color: black;
+}
+.box-item .picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.box-item .picture img:hover{
+    transform: scale(95%,95%);
+}
+.box-item .des{
+    width: 100%;
+    height: 30%;
+}
+.box-item .des p{
+    font-size: 20px;
+    margin: 5px ;
+    font-family: 'Battambang';
+    line-height: 25px;
+}
+.daily-news .small-item-new{
+    width: 15%;
+    height: 49%;
+    margin-bottom: 1%;
+    /* background-color: black; */
+}
+.small-item-new .picture{
+    width: 100%;
+    height: 60%;
+}
+.small-item-new .picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.small-item-new .des{
+    width: 100%;
+    height: 40%;
+}
+.small-item-new .des p{
+    font-size: 13px;
+    margin: 0px 7px;
+    font-family: 'Battambang';
+    line-height: 20px;
+}
+.komsan-news{
+    width: 100%;
+    height: 400px;
+    /* background-color: violet; */
+    padding: 20px 30px 0px 30px;
+    box-sizing: border-box;
+}
+.komsan-news .big-news{
+    width: 30%;
+    height: 100%;
+    float: left;
+    /* background-color: blueviolet; */
+}
+.big-news .image{
+    width: 100%;
+    height: 60%;
+}
+.big-news .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.big-news .news-title{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(231, 91, 115);
+}
+.big-news .news-title h1{
+    margin:0px 10px;
+    font-family: 'Battambang';
+    line-height: 32px;
+}
+.right-content-news{
+    width: 68%;
+    margin-left: 2%;
+    height: 100%;
+    float: left;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.right-content-news .item{
+    width: 24%;
+    height: 49%;
+    /* background-color: green; */
+    margin-bottom: 1%;
+}
+.right-content-news .item .image{
+    width: 100%;
+    height: 50%;
+}
+.right-content-news .item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right-content-news .item .news-title{
+    width: 100%;
+    height: 50%;
+}
+.right-content-news .item .news-title p{
+    margin: 0px 5px;
+    font-family: 'Battambang';
+    line-height: 20px;
+    font-size: 14px;
+
+}
+.footer-container-full{
+    width: 100%;
+    height: 320px;
+    background-color: black;
+    margin-top: 30px;
+}
+.footer-container{
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    background-color: blue;
+}
+.footer{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: red;
+}
+.footer:nth-child(2){
+    width: 40%;
+    background-color: yellow;
+}
+
+.container-techno{
+    width: 75%;
+    overflow: hidden;
+    margin:20px auto;
+   
+}
+.left-content-techno{
+    width: 70%;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px grey;
+    float: left;
+}
+.title-techno{
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid blue;
+}
+.des-techno{
+    width: 120px;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Koulen' ;
+    color: white;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+}
+.des-techno p{
+    transform: translateX(-10px);
+}
+
+.content-techno-news{
+    width: 100%;
+    overflow: hidden;
+    /* background-color: brown; */
+    padding: 20px;
+    box-sizing: border-box;
+    /* box-shadow: 1px 1px 1px grey; */
+}
+.content-techno-news .top2-news{
+    width: 100%;
+    height: 250px;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.top2-news .box-news{
+    width: 49%;
+    height: 100%;
+    /* background-color: green; */
+}
+.top2-news .box-news .image-techno{
+    width: 100%;
+    height: 70%;
+    background-color: black;
+}
+.top2-news .box-news .image-techno img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box-news .desc-techno{
+    width: 100%;
+    height: 30%;
+}
+.box-news .desc-techno span{
+    font-size: 14px;
+    font-family:'Battambang' ;
+    margin: 0px 10px;
+    line-height: 23px;
+}
+.Row-item{
+    width: 100%;
+    height: 180px;
+    /* background-color: black; */
+    margin-top: 15px;
+}
+.Row-item .box-img{
+    width: 40%;
+    height: 100%;
+    float: left;
+    background-color: burlywood;
+}
+.Row-item .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Row-item .description{
+    width: 60%;
+    height: 100%;
+    float: left;
+    /* background-color: rgb(45, 29, 9); */
+}
+.Row-item .description p{
+    font-size: 20px;
+    margin: 5px 10px;
+    font-family: 'Battambang';
+    line-height: 30px;
+}
+.Row-item .description hr{
+    margin-left: 10px;
+    border: 1px solid rgb(232, 219, 219);
+}
+.Row-item .description small{
+    font-size: 14px;
+    margin: 5px 10px;
+    font-family: 'Battambang';
+    color: grey;
+}
+.right-content-techno{
+    width: 28%;
+    overflow: hidden;
+    float: left;
+    margin-left: 2%;
+}
+.popular-news{
+    width: 100%;
+    height: 40px;
+    /* background-color: black; */
+}
+.popular-news h1{
+    font-size: 20px;
+    font-family:'Koulen' ;
+    color: rgb(88, 80, 80);
+}
+.smal-pop-news{
+    width: 100%;
+    margin-top: 5px;
+    height: 60px;
+    /* background-color: green; */
+}
+.smal-pop-news .image{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.smal-pop-news .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.smal-pop-news .sub-title{
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.smal-pop-news .sub-title small{
+    font-size: 13px;
+    font-family: 'Battambang';
+    color: rgb(88, 80, 80);
+}
